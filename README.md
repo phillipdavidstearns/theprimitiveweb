@@ -8,7 +8,7 @@
 
 * **`whoami`** - Phillip David Stearns (Artist, Designer, Engineer, Educator)
 * **what is this?** - A walkthrough to re-discover the Internet and learn how to use the command line to make things.
-* **who is it for?** - Sadly, only folks with Mac OSX, Linux, or Unix operating systems.
+* **who is it for?** - Sadly, this is geared to folks using Mac OSX (sorry, Windows users). This will work on Linux, or Unix operating systems, but hotkeys and terminal application functions will differ.
 * **why?** - The Internet is a place for everyone and anyone can make a website. Internet tools can be used to locally host info offline (Intranet).
 
 
@@ -29,7 +29,7 @@
 ![](resources/images/terminal.png)
 
 
-## 3. run `pwd` to see what your preset working directory is
+## 3. run `pwd` to see what your present working directory is
 
 You should get something like:
 
