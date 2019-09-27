@@ -1,5 +1,7 @@
 # Primitive Web (1.0) Publishing
 
+### Get this walkthrough on your computer! Go to: [https://github.com/phillipdavidstearns/theprimitiveweb](https://github.com/phillipdavidstearns/theprimitiveweb)
+
 ## Hello!
 
 ![](resources/images/hello.gif)
@@ -59,22 +61,36 @@ You should get something like:
 
 **`cd`** changes your working directory
 
-## 7. run `la -ahl` to view its contents
+## 7. run `ls -ahl` to view its contents
 
-![](resources/images/documents.png)
+Wow! You have a lot of junk in there!
 
 ## 8. run `mkdir mywebpage` to create a directory for your webpage
 
+Run `ls -ahl` to check that it was created:
+
+![](resources/images/documents.png)
 
 ## 9. run `cd mywebpage` to change to that directory
 
+Simple
+
 ## 10. run `pwd` to confirm your path
 
+```
+/Users/coursework/Documents/mywebpage
+```
 
 ## 11. run `ls` to confirm it's empty
 
+![](resources/images/crickets.gif)
+**\*crickets chirping\***
 
-## 12. run `echo 'Hello World!' > index.html` to create a webpage
+## 12. run `echo '<h1>Hello World!</h1>' > index.html` to create a webpage
+
+* `echo` writes text to the standard output
+* in this case, the text is enclosed in single quotes: `''` which means "don't interpret special characters"
+* `>` redirects the output of the previous command to a specified file. If it doesn't exist, it'll create it, otherwise it overwrites the contents (!!!).
 
 ## 13. run `python -m SimpleHTTPServer 8080`
 
@@ -87,7 +103,7 @@ This will launch a server hosting your webpage on your own computer at `localhos
 
 ##14. open a web browser and enter `localhost:8080` in the URL navigation bar
 
-![](resources/images/localhost.png)
+![](resources/images/mywebpage.png)
 
 ## 15. return to the terminal and press `command+t` to create a new tab
 
@@ -95,9 +111,19 @@ This will launch a server hosting your webpage on your own computer at `localhos
 
 ## 16. run `pwd` to check that you're in the directory of your website
 
-## 17. run `mkdir images; cd images` to create a directory called "images" and change to it
+```
+/Users/coursework/Documents/mywebpage
+```
 
-Using
+If not, you can`cd` directly to it: `cd /Users/coursework/Documents/mywebpage
+`
+
+## 17. run `mkdir images; cd images`
+
+This creates a directory called "images" and changes to it. 
+
+* You can string multiple commands together
+* place `; ` between commands
 
 ## 18. grab a random cat or dog gif from the web:
 
@@ -105,6 +131,8 @@ Using
 * for dog people, run `wget 'https://api.thedogapi.com/api/images/get?format=src&type=gif' -O dog.gif`
 
 ## 19. run `ls -alh` to confirm that it shows up as `./images/cat.gif` or `./images/dog.gif`
+
+![](resources/images/search.gif)
 
 ## 20. run `nano ../index.html` and edit the webpage to read:
 
@@ -130,17 +158,17 @@ For dogs:
 </html>
 ```
 
-## 21. press `control+o` and then `enter` to save
+## 21. press `control+x`, then `y` and then `enter` to save and exit
 
-![](resources/images/)
 
 ## 22. in your browser, click refresh
 
-![](resources/images/)
+![](resources/images/helloworld.png)
 
 ## BONUS!
 
-
+1. Run the command `ipconfig getifaddr en0` to find your IP address on your network.
+2. Share this IP address with friends on your network. Have them navigate to `http://your.ip.address:8080` for example `http://192.168.0.123:8080`
 
 ## Clean up!
 
@@ -150,4 +178,9 @@ For dogs:
 4. Delete files in the **mywebpage** directory using `rm ~/Documents/mywebpage/*`
 5. Delete the **mywebpage** directory using `rmdir ~/Documents/mywebpage`
 
-All done!
+## All done!
+
+Thanks for following along. You can find more of my work at
+
+* [https://phillipstearns.com](https://phillipstearns.com)
+* [https://github.com/phillipdavidstearns](https://github.com/phillipdavidstearns) 
