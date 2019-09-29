@@ -125,16 +125,44 @@ This creates a directory called "images" and changes to it.
 * You can string multiple commands together
 * place `; ` between commands
 
-## 18. grab a random cat or dog gif from the web:
+## 18. Install Homebrew
+
+![](resources/images/homebrew.png)
+
+**Homebrew** is like the app store but for hackers like us who use the command line.
+
+### Install hombrew by running the following command:
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+### NOTE:
+
+* You will have to enter your admin (login) password, if you don't have permission to install software on your machine, then this won't work. See if you can get an account setup where you can install software.
+* You may also have to install the Xcode command line tools. If prompted, install them and **be patient!**. If you're not returned to a command prompt `$` or `#`, then the installation is still going on. To cancel, press `control+c`
+
+## 19. Install `wget`
+
+**`wget`** is the "non-interactive network downloader."
+
+It doesn't come pre-installed on OSX, but is available via Homebrew.
+
+Install `wget` vis Homebrew by running:
+
+```
+brew install wget
+```
+
+## 20. grab a random cat or dog gif from the web:
 
 * for cat poeple, run: `wget 'https://thecatapi.com/api/images/get?format=src&type=gif' -O cat.gif`
 * for dog people, run `wget 'https://api.thedogapi.com/api/images/get?format=src&type=gif' -O dog.gif`
 
-## 19. run `ls -alh` to confirm that it shows up as `./images/cat.gif` or `./images/dog.gif`
+## 21. run `ls -alh` to confirm that it shows up as `./images/cat.gif` or `./images/dog.gif`
 
 ![](resources/images/search.gif)
 
-## 20. run `nano ../index.html` and edit the webpage to read:
+## 22. run `nano ../index.html` and edit the webpage to read:
 
 For cats:
 
@@ -158,10 +186,10 @@ For dogs:
 </html>
 ```
 
-## 21. press `control+x`, then `y` and then `enter` to save and exit
+## 23. press `control+x`, then `y` and then `enter` to save and exit
 
 
-## 22. in your browser, click refresh
+## 24. in your browser, click refresh
 
 ![](resources/images/helloworld.png)
 
@@ -170,6 +198,10 @@ For dogs:
 1. Run the command `ipconfig getifaddr en0` to find your IP address on your network.
 2. Share this IP address with friends on your network. Have them navigate to `http://your.ip.address:8080` for example `http://192.168.0.123:8080`
 
+### NOTE:
+
+If you're paranoid, like me, you've probably enabled your firewall and blocked unsolicited incoming connections. Good for you! If this is the case, you'll have to make firewall rules to allow inbound/outboun requests on your HTTP server port, so you can share your work with others on your network.
+
 ## Clean up!
 
 1. Turn off the `SimpleHTTPServer` by either closing the tab or by activating the terminal tab and pressing `control+c`
@@ -177,6 +209,13 @@ For dogs:
 3. Delete the **images** directory using `rmdir ~/Documents/mywebpage/images`
 4. Delete files in the **mywebpage** directory using `rm ~/Documents/mywebpage/*`
 5. Delete the **mywebpage** directory using `rmdir ~/Documents/mywebpage`
+
+### CAUTION:
+
+`rm` will **permanently** remove files without asking for confirmation. Be 100% sure you're executing it with the right path, especially when using the `*` wildcard symbol.
+
+* Running `rm *`
+* If you run `sudo rm -rf /` you will permenently erase your entire file system and all drives attached. DON'T DO IT!
 
 ## All done!
 
