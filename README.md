@@ -210,12 +210,12 @@ If you're paranoid, like me, you've probably enabled your firewall and blocked u
 4. Delete files in the **mywebpage** directory using `rm ~/Documents/mywebpage/*`
 5. Delete the **mywebpage** directory using `rmdir ~/Documents/mywebpage`
 
-### CAUTION:
+### !!! CAUTION !!!
 
 `rm` will **permanently** remove files without asking for confirmation. Be 100% sure you're executing it with the right path, especially when using the `*` wildcard symbol.
 
-* Running `rm *`
-* If you run `sudo rm -rf /` you will permenently erase your entire file system and all drives attached. DON'T DO IT!
+* Running `rm *` will delete all files in your current working directory.
+* If you run `sudo rm -rf /` you will permenently erase your entire file system and all drives attached. ***DON'T DO IT, EVER!!!***
 
 ## All done!
 
